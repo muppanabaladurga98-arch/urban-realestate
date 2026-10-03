@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b1324" />
+  <meta name="description" content="UrbanNest — discover premium homes, apartments and commercial properties." />
+  <title>UrbanNest — Find a place that feels like home</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="announcement">New listings every week · <span>Schedule a private tour today</span></div>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="UrbanNest home"><img src="assets/logo.svg" alt="UrbanNest logo" /></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#properties">Properties</a><a href="#services">Services</a><a href="#neighborhoods">Neighborhoods</a><a href="#about">About</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">☼</button>
+      <button class="ghost-btn" id="savedBtn">♡ Saved <span id="savedCount">0</span></button>
+      <a class="primary-btn small" href="tel:8074746443">Call 80747 46443</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobileMenu"><a href="#properties">Properties</a><a href="#services">Services</a><a href="#neighborhoods">Neighborhoods</a><a href="#about">About</a><a href="tel:8074746443">Call us</a></div>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow"><span class="pulse"></span> Curated homes · trusted guidance</div>
+        <h1>Find a place that<br /><em>feels like home.</em></h1>
+        <p>Discover thoughtfully selected homes, apartments and investment properties in the neighborhoods you love.</p>
+        <div class="search-panel" id="searchPanel">
+          <div class="search-field"><label>Looking for</label><select id="typeFilter"><option value="all">Any property</option><option>Apartment</option><option>Villa</option><option>House</option><option>Commercial</option></select></div>
+          <div class="search-field"><label>Location</label><input id="locationFilter" type="text" placeholder="City or neighborhood" /></div>
+          <div class="search-field"><label>Budget</label><select id="budgetFilter"><option value="all">Any budget</option><option value="10000000">Under ₹1 Cr</option><option value="20000000">Under ₹2 Cr</option><option value="40000000">Under ₹4 Cr</option></select></div>
+          <button class="search-btn" id="searchBtn">Search <span>→</span></button>
+        </div>
+        <div class="hero-trust"><div><strong>250+</strong><span>Active listings</span></div><div><strong>4.9/5</strong><span>Client rating</span></div><div><strong>12 yrs</strong><span>Local expertise</span></div></div>
+      </div>
+      <div class="hero-art" aria-label="Featured modern home"><div class="hero-card"><img src="assets/images/property-1.svg" alt="Modern villa" /><div class="hero-card-info"><span>Featured residence</span><strong>Skyline Villa</strong><small>Gachibowli · Hyderabad</small></div></div><div class="float-pill">⌖ 2.4 km from city center</div></div>
+    </section>
+
+    <section class="section" id="properties">
+      <div class="section-head"><div><span class="kicker">EXPLORE THE COLLECTION</span><h2>Properties made for <em>living well.</em></h2></div><button class="outline-btn" id="resetFilters">Reset filters</button></div>
+      <div class="filter-row"><button class="chip active" data-chip="all">All</button><button class="chip" data-chip="Apartment">Apartments</button><button class="chip" data-chip="Villa">Villas</button><button class="chip" data-chip="House">Houses</button><button class="chip" data-chip="Commercial">Commercial</button><span class="result-count" id="resultCount"></span></div>
+      <div class="property-grid" id="propertyGrid"></div>
+      <div class="empty-state hidden" id="emptyState"><div>⌂</div><h3>No properties found</h3><p>Try widening your location or budget filters.</p><button class="primary-btn" id="emptyReset">View all properties</button></div>
+    </section>
+
+    <section class="stats-band"><div><strong>₹185 Cr+</strong><span>Property value transacted</span></div><div><strong>1,200+</strong><span>Happy families</span></div><div><strong>36</strong><span>Prime neighborhoods</span></div><div><strong>98%</strong><span>Referral & repeat clients</span></div></section>
+
+    <section class="section services" id="services"><div class="section-head"><div><span class="kicker">MORE THAN A LISTING</span><h2>A smarter way to <em>move.</em></h2></div></div><div class="service-grid"><article><span>01</span><div class="service-icon">⌂</div><h3>Buy with confidence</h3><p>Curated homes, verified details and local guidance from first viewing to keys.</p><a href="#contact">Explore buying →</a></article><article><span>02</span><div class="service-icon">◈</div><h3>Sell at your value</h3><p>Position your property with professional presentation, targeted reach and market insight.</p><a href="#contact">List your property →</a></article><article><span>03</span><div class="service-icon">▣</div><h3>Invest intelligently</h3><p>Compare rental potential, location signals and long-term value before you commit.</p><a href="#calculator">Calculate returns →</a></article></div></section>
+
+    <section class="section neighborhood-section" id="neighborhoods"><div class="section-head"><div><span class="kicker">WHERE LIFE HAPPENS</span><h2>Explore popular <em>neighborhoods.</em></h2></div></div><div class="neighborhood-grid"><article class="neighborhood large"><img src="assets/images/neighborhood-1.svg" alt="Hyderabad skyline" /><div><span>01 · HYDERABAD</span><h3>Gachibowli</h3><p>Tech, cafés, modern residences.</p></div></article><article class="neighborhood"><img src="assets/images/neighborhood-2.svg" alt="City neighborhood" /><div><span>02 · HYDERABAD</span><h3>Jubilee Hills</h3><p>Quiet luxury & leafy streets.</p></div></article><article class="neighborhood"><img src="assets/images/neighborhood-3.svg" alt="Urban neighborhood" /><div><span>03 · VIJAYAWADA</span><h3>Benz Circle</h3><p>Connected, central, convenient.</p></div></article></div></section>
+
+    <section class="calculator-section" id="calculator"><div class="calc-copy"><span class="kicker">PLAN BEFORE YOU BUY</span><h2>Know your monthly<br /><em>comfort zone.</em></h2><p>Use our quick mortgage estimator to understand the approximate monthly payment for a home.</p></div><div class="calculator-card"><div class="range-line"><label>Home price <output id="priceOut">₹1.50 Cr</output></label><input id="priceRange" type="range" min="2000000" max="100000000" step="500000" value="15000000" /></div><div class="range-line"><label>Down payment <output id="downOut">20%</output></label><input id="downRange" type="range" min="5" max="60" step="5" value="20" /></div><div class="range-line"><label>Interest rate <output id="rateOut">8.5%</output></label><input id="rateRange" type="range" min="5" max="15" step="0.1" value="8.5" /></div><div class="range-line"><label>Loan term <output id="termOut">20 yrs</output></label><input id="termRange" type="range" min="5" max="30" step="1" value="20" /></div><div class="monthly"><span>Estimated monthly</span><strong id="emiOut">₹1,04,121</strong><small>Indicative only · excludes taxes, fees & insurance</small></div></div></section>
+
+    <section class="testimonial-section" id="about"><div class="quote-mark">“</div><blockquote>UrbanNest made a complicated purchase feel surprisingly clear. Every property we saw was relevant, and every question got a straight answer.</blockquote><div class="quote-author"><div class="avatar">AR</div><div><strong>Ananya Rao</strong><span>Homeowner · Hyderabad</span></div><div class="stars">★★★★★</div></div></section>
+
+    <section class="contact-section" id="contact"><div><span class="kicker">LET'S TALK PROPERTY</span><h2>Have a property in mind?<br /><em>Let's make it real.</em></h2><p>Tell us what you're looking for and our team will get back to you.</p></div><form id="contactForm"><div class="two"><input required name="name" placeholder="Your name" /><input required type="tel" name="phone" placeholder="Phone number" /></div><input required type="email" name="email" placeholder="Email address" /><select name="interest"><option>I'm looking to buy</option><option>I'm looking to sell</option><option>I'm looking to invest</option><option>I need a property valuation</option></select><textarea name="message" rows="4" placeholder="Tell us about your requirement..."></textarea><button class="primary-btn" type="submit">Send enquiry <span>→</span></button><p class="form-note" id="formNote"></p></form></section>
+  </main>
+
+  <footer><div class="footer-main"><div><img class="footer-logo" src="assets/logo-light.svg" alt="UrbanNest" /><p>Modern real estate guidance for modern living.</p></div><div><h4>Explore</h4><a href="#properties">Properties</a><a href="#neighborhoods">Neighborhoods</a><a href="#calculator">Mortgage calculator</a></div><div><h4>Company</h4><a href="#about">About UrbanNest</a><a href="#contact">Contact</a><a href="tel:8074746443">Call us</a></div><div><h4>Contact</h4><p>+91 80747 46443</p><p>hello@urbannest.example</p><p>Andhra Pradesh · India</p></div></div><div class="footer-bottom"><span>© 2026 UrbanNest. All rights reserved.</span><span>Designed for a premium digital experience.</span></div></footer>
+
+  <div class="modal-backdrop hidden" id="modalBackdrop"><div class="property-modal" role="dialog" aria-modal="true"><button class="modal-close" id="modalClose">×</button><div id="modalContent"></div></div></div>
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
